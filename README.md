@@ -32,7 +32,7 @@ Predict mission readiness with high accuracy using logistic and tactical input v
 
 ### 🧠 Models Tested
 - ✅ Random Forest Classifier  
-- 🔁 Logistic Regression (baseline)
+- 🔁 Logistic Regression (baseline & class-balanced)
 
 ---
 
@@ -52,47 +52,57 @@ Understanding what drives mission readiness:
 
 ![Feature Importance](feature_importance.png)
 
-> Key insights: Supply chain delays and equipment readiness were the top drivers of mission outcomes — matching what defense ops teams experience in the field.
-
 ---
 
 ## 📊 Model Performance Comparison
 
-| Model               | Accuracy | Precision | Recall | F1 Score |
-|--------------------|----------|-----------|--------|----------|
-| ✅ Random Forest     | 1.00     | 1.00      | 1.00   | 1.00     |
-| 🔁 Logistic Regression | 0.75     | 0.75      | 0.75   | 0.75     |
+### Version 2.1 Update:
+With added realism (imbalanced classes, missing values, noisy data), performance was re-evaluated:
+
+| Model                         | Accuracy | Precision | Recall | F1 Score |
+|------------------------------|----------|-----------|--------|----------|
+| ✅ Random Forest              | High     | High      | High   | High     |
+| 🔁 Logistic Regression (Balanced) | Moderate  | Moderate  | Moderate | Moderate  |
 
 📉 **Performance Chart:**
 
-![Model Comparison](model_comparison_chart.png)
+![Model Comparison](model_comparison_v2.1.png)
 
-> Random Forest clearly outperformed Logistic Regression in handling non-linear patterns and critical decision boundaries.
+---
+
+## 🔀 Confusion Matrices
+
+These show how each model handles all three readiness outcomes:
+
+📦 Random Forest vs Logistic Regression:
+
+![Confusion Matrices](confusion_matrices_v2.1.png)
 
 ---
 
 ## 📁 Project Files
 
-- `MissionReadinessModel.ipynb` – Full notebook with code, metrics, and charts  
-- `mission_readiness_data.csv` – Clean, simulated dataset  
-- `feature_importance.png` – Top features visual  
-- `model_comparison_chart.png` – Performance comparison  
-- `README.md`, `SETUP.md`, `.gitignore`, `LICENSE`, `requirements.txt`
+- `MissionReadinessModel.ipynb` – Notebook with code, metrics, and visualizations  
+- `mission_readiness_data_realistic.csv` – Enhanced synthetic dataset  
+- `feature_importance.png` – Top feature analysis  
+- `model_comparison_v2.1.png` – Updated performance chart  
+- `confusion_matrices_v2.1.png` – Class-wise accuracy comparison  
+- `README.md`, `SETUP.md`, `.gitignore`, `LICENSE`, `CHANGELOG.md`, `requirements.txt`
 
 ---
 
 ## 🧭 How to Run
 
-See `SETUP.md` for full installation and notebook instructions.
+See `SETUP.md` for install instructions and notebook walkthrough.
 
 ---
 
 ## 💡 Why This Matters
 
 This project demonstrates:
-- 🚀 Practical AI application in defense & logistics
-- 🔍 Feature engineering and model comparison
-- 🧠 Mission-driven problem-solving from a veteran's perspective
+- 🚀 Real-world AI application in defense & logistics
+- 📊 Handling of imbalanced, noisy, and incomplete data
+- 🧠 Mission-driven thinking from a Navy veteran’s lens
 
 ---
 
