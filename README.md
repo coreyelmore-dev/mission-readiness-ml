@@ -80,6 +80,28 @@ These show how each model handles all three readiness outcomes:
 
 ---
 
+## 🧠 Summary of Findings
+
+After testing and improving multiple models across different data conditions, here’s what I learned:
+
+- **Random Forest consistently performed best** in both clean and imbalanced datasets, handling complexity and class separation well.
+- **Logistic Regression struggled** on imbalanced data, but significantly improved when class balancing (`class_weight='balanced'`) was applied.
+- The most important features for predicting mission readiness were:
+  - `supply_delay_days`  
+  - `equipment_status_score`  
+  - `personnel_available`
+
+> This aligns closely with real-world mission planning, where logistics, maintenance, and troop availability are critical to execution.
+
+The project also highlighted how real-world data challenges like **missing values, noise, and class imbalance** affect model performance — and the importance of addressing them through preprocessing and thoughtful model selection.
+
+This foundation sets the stage for:
+- 🚀 A future web-based prediction tool (Streamlit)
+- 🧠 Advanced model experimentation (XGBoost, ensemble learning)
+- 📊 Integration with real-world mission datasets
+
+---
+
 ## 📁 Project Files
 
 - `MissionReadinessModel.ipynb` – Notebook with code, metrics, and visualizations  
