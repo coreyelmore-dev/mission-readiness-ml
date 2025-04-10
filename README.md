@@ -1,36 +1,45 @@
 
-# 🧠 AI-Powered Mission Readiness Prediction Tool
+# 🧠 Mission Readiness Prediction Tool
 
-This project applies machine learning to predict mission readiness status based on key operational variables such as logistics delays, personnel availability, equipment conditions, weather severity, and mission type. It’s inspired by real-world defense operations and built to demonstrate how AI can support smarter planning and resource allocation.
+This machine learning project predicts mission readiness using simulated defense logistics and operational data. It demonstrates how AI can support smarter planning, resource allocation, and readiness forecasting in high-stakes environments.
 
 ## 🚀 Project Overview
 
-As a transitioning Navy Corpsman with experience training Marines and Seabees and evaluating tactical operations, I designed this project to merge that experience with the power of data-driven decision-making.
+> Predicts whether a mission is **Ready**, **Delayed**, or **Critical** based on:
+- Supply delay days
+- Personnel availability
+- Equipment status score
+- Weather severity
+- Mission type
 
-The model predicts whether a mission will be classified as:
-- ✅ Ready
-- ⚠️ Delayed
-- 🔴 Critical
+Built using:
+- ✅ Python
+- ✅ Pandas / NumPy
+- ✅ Scikit-learn
+- ✅ Matplotlib / Seaborn
 
-## 🧰 Tools & Technologies
-- Python
-- Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
-- Random Forest Classifier
-- Jupyter Notebook
+## 📊 Visuals and Performance
 
-## 📊 Features
-- Simulated dataset of 500 mission scenarios
-- Encoded weather and mission types
-- Cleaned and split data for training/testing
-- Built and evaluated classification model
-- Feature importance analysis
-- Visual breakdown of readiness by mission type
+| Model               | Accuracy | Precision | Recall | F1 Score |
+|--------------------|----------|-----------|--------|----------|
+| Random Forest       | 1.00     | 1.00      | 1.00   | 1.00     |
+| Logistic Regression | 0.75     | 0.75      | 0.75   | 0.75     |
 
-## 📌 Next Steps
-- Add dashboard integration (Streamlit/Power BI)
-- Extend to real-world datasets or defense simulations
-- Test with additional ML algorithms
+📊 **Model Comparison Chart:**
 
-## 👋 Let’s Connect
-If you're working at the intersection of defense, AI, or logistics — I’d love to connect and collaborate.
-📬 https://www.linkedin.com/in/coreyelmoreusn/
+![Model Comparison](model_comparison_chart.png)
+
+> Based on performance, Random Forest was selected as the final model due to superior accuracy and handling of complex relationships.
+
+## 📁 Project Files
+
+- `MissionReadinessModel.ipynb` — Code, charts, and comparison
+- `mission_readiness_data.csv` — Simulated data
+- `model_comparison_chart.png` — Visual performance chart
+- `requirements.txt` — Easy environment setup
+- `.gitignore` and `LICENSE` included
+
+## 📫 About Me
+
+Corey Elmore — Navy veteran, logistics & ops leader, and aspiring AI/ML engineer.  
+[LinkedIn](https://www.linkedin.com/in/coreyelmoreusn) | [GitHub](https://github.com/coreyelmore-dev)
